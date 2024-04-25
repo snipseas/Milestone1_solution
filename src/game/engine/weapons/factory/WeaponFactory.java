@@ -50,9 +50,15 @@ public class WeaponFactory {
         weaponShop.put(code, new WeaponRegistry(code, price, damage, name)); 
     }
 
-	 public void addWeaponToShop(int code, int price, int damage, String name, int minRange, int maxRange) {
-	        //WeaponRegistry weapon = new WeaponRegistry(code, price, damage, name, minRange, maxRange);
-	        weaponShop.put(code, (new WeaponRegistry(code, price, damage, name, minRange, maxRange)));
-	    }
+	public void addWeaponToShop(int code, int price, int damage, String name, int minRange, int maxRange)
+	{
+		WeaponRegistry weaponRegistry = new WeaponRegistry(code, price,damage,name,minRange,maxRange);
+		weaponShop.put(code, weaponRegistry);
+	}
+
+	public static int getWeaponByCode(int weaponCode) {
+		// TODO Auto-generated method stub
+		return weaponCode;
+	}
 	
 }

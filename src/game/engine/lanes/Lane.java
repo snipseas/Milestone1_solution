@@ -114,4 +114,9 @@ public class Lane implements Comparable<Lane> {
 			return dangerLevel;
 			
 		}
+
+		public boolean isActive() {
+			// TODO Auto-generated method stub
+			return false;
+		}
 }

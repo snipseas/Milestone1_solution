@@ -69,4 +69,9 @@ public class TitanRegistry {
 			 }
 	}
 
+		public Titan getTitan() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
 }

@@ -81,5 +81,7 @@ public abstract class Titan implements Comparable<Titan>, Attacker, Attackee, Mo
 
 		return (this.distanceFromBase - arg0.distanceFromBase);
 
-	};
+	}
+
+
 }

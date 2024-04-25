@@ -1,15 +1,20 @@
 package game.engine;
 
 import java.io.IOException;
+import java.io.InvalidClassException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.PriorityQueue;
 
 import game.engine.base.Wall;
 import game.engine.dataloader.DataLoader;
+import game.engine.exceptions.InsufficientResourcesException;
+import game.engine.exceptions.InvalidLaneException;
 import game.engine.lanes.Lane;
 import game.engine.titans.Titan;
 import game.engine.titans.TitanRegistry;
+import game.engine.weapons.Weapon;
 import game.engine.weapons.factory.WeaponFactory;
 
 public class Battle {
@@ -137,5 +142,43 @@ public class Battle {
 			
 		}
 }
+	
+	public void refillApproachingTitans() {
+			switch(battlePhase){
+			case EARLY : 
+				break;
+			case INTENSE : 
+				break;
+			case GRUMBLING : 
+				break;
+			}
+			if (battlePhase==BattlePhase.EARLY){
+				for(int i=0;i<PHASES_APPROACHING_TITANS[0].length; i++) {	
+				}
+			}
+			if (battlePhase==BattlePhase.INTENSE){
+				for(int i=0;i<PHASES_APPROACHING_TITANS[1].length; i++){
+				}
+			}
+			if (battlePhase==BattlePhase.GRUMBLING){
+				for(int i=0;i<PHASES_APPROACHING_TITANS[2].length; i++){
+				}
+
+			}
+		}
+	private void moveTitans(){
+		   
+	        for (Lane lane : lanes) 
+	        {
+	        	lane.moveLaneTitans();
+	        }
+	   } 
+	
+	
 
 }
+		
+		
+		
+
+
